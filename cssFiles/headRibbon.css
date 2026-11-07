@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+#headRibbon{
+    background-color: #0B0D0F;
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 48px);
+    min-height: 72px;
+    width: 100%;
+    padding: 10px clamp(16px, 5vw, 80px);
+}
+#logo{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 10px;
+}
+#logo h1{
+    color: white;
+    font-family: Barlow Condensed,Arial, Helvetica, sans-serif;
+    font-size: clamp(20px, 2.5vw, 32px);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+#logo img{
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+#headMenu{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: clamp(14px, 2vw, 30px);
+    color:#9DA3A8;
+    font-family: Inter,Arial, Helvetica, sans-serif;
+}
+#searchBar{
+    display: flex;
+    align-items: center;
+    flex: 1 1 260px;
+    gap: 8px;
+    max-width: 420px;
+}
+.menuIcons{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+#searchBar input{
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px 14px;
+    border: 0;
+}
+#cartAndAccount{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    color: white;
+    gap: clamp(12px, 2vw, 28px);
+    font-family: Inter,Arial, Helvetica, sans-serif;
+}
+.accountAction {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    #headRibbon {
+        flex-wrap: wrap;
+    }
+
+    #searchBar {
+        order: 4;
+        flex-basis: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 520px) {
+    #headRibbon {
+        gap: 12px;
+    }
+
+    #logo h1 {
+        font-size: 22px;
+    }
+
+    #headMenu {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+}
