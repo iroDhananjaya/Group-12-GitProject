@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url(mainpgbg.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    padding-left: 20px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-out;
+}
+
+.menu ul li a:hover {
+    color: #ff7200;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    font-family: 'Times New Roman', serif;
+    width: 180px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    color: white;
+    border-right: none;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.srch:focus, .btn:focus {
+    outline: none;
+}
+
+.btn {
+    width: 90px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    color: white;
+    font-size: 16px; 
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.content span {
+    color: #ff7200;
+    font-size: 55px;
+}
+
+.content .par {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 28px;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.content .cn a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    line-height: 40px;
+}
+
+.cn:hover {
+    background-color: white;
+}
+
+.cn:hover a {
+    color: #ff7200;
+}
+
+.form {
+    width: 280px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+}
+
+.form h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.form input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ff7200;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: sans-serif;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #ddd;
+    font-family: Arial;
+}
+
+.btnn {
+    width: 100%;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.btnn:hover {
+    background: white;
+}
+
+.btnn:hover a {
+    color: #ff7200;
+}
+
+.btnn a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    line-height: 40px;
+}
+
+.form .link {
+    font-family: Arial;
+    font-size: 14px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.form .link a {
+    text-decoration: none;
+    color: #ff7200;
+    font-weight: bold;
+}
+
+.liw {
+    padding-top: 12px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+.icons ion-icon {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.icons ion-icon:hover {
+    color: #ff7200;
+}
