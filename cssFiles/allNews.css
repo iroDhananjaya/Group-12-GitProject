@@ -96,6 +96,7 @@ body{
     border-top: 1px solid #6B1414;
     border-bottom: 1px solid #6B1414;
     height: clamp(40px, 4vh, 60px);
+    padding: 2px 0px 0px;
 }
 #menuItems{
     display: flex;
@@ -106,9 +107,9 @@ body{
     font-size: 10px;
     font-weight: bold;
     color:#6B1414;
-    height: 92%;
+    height: clamp(38px, 20px, 60px);
     align-items: center;
-    border-bottom: 4px solid #fefefe;
+    border-bottom: 1px solid #fefefe;
 }
 #menuItems div{
     display: flex;
