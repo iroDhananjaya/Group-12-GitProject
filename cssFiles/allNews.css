@@ -8,24 +8,27 @@ body{
 }
 #HribbonTop{
     background-color:#6B1414 ;
-    
+    height: clamp(30px, 2vh, 40px);
 }
 #Hlogo{
     display: flex;
     flex-direction: row;
     margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
     color:#F5D97A;
     font-family: Libre Baskerville,Arial, Helvetica, sans-serif;
 }
-#logoText{
-    margin-left: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-}
 #logo{
-    width:2%;
     border-radius: 5px;
-    margin: 1% 2%;
+    margin-top: 0.4%;
+    margin-bottom: auto;
+    width: clamp(15px, 2vw, 20px);
+}
+#logoText{
+    font-size: 10px;
+    margin-top: 0.6%;
+    margin-bottom: auto;
 }
 #HribbonMiddle{
     display: flex;
@@ -308,7 +311,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0;
     background-color: #f0f0f0;
     padding:36px 80px 64px 6.5%;
 }
@@ -330,17 +332,15 @@ body{
     color: white;
 }
 #exploreBtn p{
-    margin-top: clamp(30px 1vh 40px);
+    margin-top: clamp(30px, 1vh, 40px);
     text-align: center;
     margin-left: auto;
-    /*border: 2px solid white;*/
 }
 #exploreBtn img{
     margin-top: auto;
     margin-bottom: auto;
-    /*border: 2px solid white;*/
 }
-#logoText,#footerLogoText{
+#footerLogoText{
     font-size:24px;
     color:#6B1414;
     margin:0;
@@ -352,7 +352,7 @@ body{
     gap:10px;
     align-items: center;
 }
-#logo,#footerLogo{
+#footerLogo{
     width:clamp(90px, 2vw, 100px);
     height:auto;
 }
@@ -362,12 +362,6 @@ body{
     padding: 20px 60px;
     box-sizing: border-box;
     background-color:#3D0808;
-}
-#footerContent{
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-    justify-content: space-between;
 }
 #footerLinks p{
     display: flex;
@@ -390,6 +384,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 #content p{
     color:#E8DCD2;
