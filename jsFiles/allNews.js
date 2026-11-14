@@ -9,25 +9,30 @@ const contact = document.getElementById("contact");
 const allNewsFilter = document.getElementById("allNewsFilter");
 const academicFilter = document.getElementById("academicFilter");
 const sportFilter = document.getElementById("sportFilter");
-const artsCultureFilter = document.getElementById("artsCultureFilter");
 const technologyFilter = document.getElementById("technologyFilter");
 const researchFilter = document.getElementById("researchFilter");
 
-// import news articles
-const news1 = document.getElementById("news1");
-const news2 = document.getElementById("news2");
-const news3 = document.getElementById("news3");
-const news4 = document.getElementById("news4");
-const news5 = document.getElementById("news5");
-const news6 = document.getElementById("news6");
+// import sport news articles
+const sportNews1 = document.getElementById("sportNews1");
+const sportNews2 = document.getElementById("sportNews2");
 
-const article1Imgs = ["/Group-12-GitProject/pictures/chess.jpeg", 
-                        "/Group-12-GitProject/pictures/research.jpeg",
-                         "/Group-12-GitProject/pictures/universityNews.png", 
-                         "/Group-12-GitProject/pictures/grajuation.jfif.jpeg", 
-                         "/Group-12-GitProject/pictures/cup.jpeg", 
-                         "/Group-12-GitProject/pictures/marine.jfif.jpeg"
-                    ];
+
+// import academic news articles
+const academicNews1 = document.getElementById("academicNews1");
+const academicNews2 = document.getElementById("academicNews2");
+
+
+// import technology news articles
+const technologyNews1 = document.getElementById("technologyNews1");
+const technologyNews2 = document.getElementById("technologyNews2");
+
+
+
+// import research and innovation news articles
+const innovationNews1 = document.getElementById("innovationNews1");
+const innovationNews2 = document.getElementById("innovationNews2");
+
+
 
 // navigation buttons event listeners
 
@@ -48,56 +53,96 @@ events.addEventListener("click", () => {
 });
 
 contact.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/htmlFiles/contact.html";
+    window.location.href = "/Group-12-GitProject/htmlFiles/Contact_page.html";
 });
-
+function resetFilterButtons(filterButton) {
+    filterButton.style.backgroundColor = "#F5F5F5";
+    filterButton.style.color = "black";
+}
 // filter buttons event listeners
+sportNews1.style.display = "block";
+innovationNews1.style.display = "block";
+academicNews1.style.display = "block";
+technologyNews1.style.display = "block";
+academicNews2.style.display = "block";
+technologyNews2.style.display = "block";
 
 allNewsFilter.addEventListener("click", () => {
-    news1.style.display = "block";
-    news2.style.display = "block";
-    news3.style.display = "block";
-    news4.style.display = "block";
-    news5.style.display = "block";
-    news6.style.display = "block";
+    resetFilterButtons(academicFilter);
+    resetFilterButtons(sportFilter);
+    resetFilterButtons(technologyFilter);
+    resetFilterButtons(researchFilter);
+    allNewsFilter.style.backgroundColor = "#6B1414";
+    allNewsFilter.style.color = "white";
+    for(let i=1; i<=6; i++){
+        document.getElementById("sportNews" + String(i)).style.display = "none";
+        document.getElementById("innovationNews" + String(i)).style.display = "none";
+        document.getElementById("academicNews" + String(i)).style.display = "none";
+        document.getElementById("technologyNews" + String(i)).style.display = "none";
+    }
+    sportNews1.style.display = "block";
+    innovationNews1.style.display = "block";
+    academicNews1.style.display = "block";
+    technologyNews1.style.display = "block";
+    academicNews2.style.display = "block";
+    technologyNews2.style.display = "block";
 });
 academicFilter.addEventListener("click", () => {
-    news1.style.display = "none";
-    news2.style.display = "block";
-    news3.style.display = "none";
-    news4.style.display = "none";
-    news5.style.display = "none";
-    news6.style.display = "block";
+    resetFilterButtons(allNewsFilter);
+    resetFilterButtons(sportFilter);
+    resetFilterButtons(technologyFilter);
+    resetFilterButtons(researchFilter);
+    academicFilter.style.backgroundColor = "#6B1414";
+    academicFilter.style.color = "white";
+    for(let i=1; i<=6; i++){
+        document.getElementById("sportNews" + String(i)).style.display = "none";
+        document.getElementById("innovationNews" + String(i)).style.display = "none";
+        document.getElementById("academicNews" + String(i)).style.display = "block";
+        document.getElementById("technologyNews" + String(i)).style.display = "none";
+    }
+    
 });
 sportFilter.addEventListener("click", () => {
-    news1.style.display = "block";
-    news2.style.display = "none";
-    news3.style.display = "none";
-    news4.style.display = "none";
-    news5.style.display = "block";
-    news6.style.display = "none";
+    resetFilterButtons(allNewsFilter);
+    resetFilterButtons(academicFilter);
+    resetFilterButtons(technologyFilter);
+    resetFilterButtons(researchFilter);
+    sportFilter.style.backgroundColor = "#6B1414";
+    sportFilter.style.color = "white";
+    for(let i=1; i<=6; i++){
+        document.getElementById("sportNews" + String(i)).style.display = "block";
+        document.getElementById("innovationNews" + String(i)).style.display = "none";
+        document.getElementById("academicNews" + String(i)).style.display = "none";
+        document.getElementById("technologyNews" + String(i)).style.display = "none";
+    }
 });
-artsCultureFilter.addEventListener("click", () => {
-    news1.style.display = "none";
-    news2.style.display = "none";
-    news3.style.display = "block";
-    news4.style.display = "none";
-    news5.style.display = "none";
-    news6.style.display = "none";
-});
+
 technologyFilter.addEventListener("click", () => {
-    news1.style.display = "none";
-    news2.style.display = "none";
-    news3.style.display = "none";
-    news4.style.display = "none";
-    news5.style.display = "none";
-    news6.style.display = "none";
+    resetFilterButtons(allNewsFilter);
+    resetFilterButtons(academicFilter);
+    resetFilterButtons(sportFilter);
+    resetFilterButtons(researchFilter);
+    technologyFilter.style.backgroundColor = "#6B1414";
+    technologyFilter.style.color = "white";
+    for(let i=1; i<=6; i++){
+        document.getElementById("sportNews" + String(i)).style.display = "none";
+        document.getElementById("innovationNews" + String(i)).style.display = "none";
+        document.getElementById("academicNews" + String(i)).style.display = "none";
+        document.getElementById("technologyNews" + String(i)).style.display = "block";
+    }
 });
 researchFilter.addEventListener("click", () => {
-    news1.style.display = "none";
-    news2.style.display = "block";
-    news3.style.display = "none";
-    news4.style.display = "none";
-    news5.style.display = "none";
-    news6.style.display = "none";
+    resetFilterButtons(allNewsFilter);
+    resetFilterButtons(academicFilter);
+    resetFilterButtons(sportFilter);
+    resetFilterButtons(technologyFilter);
+    researchFilter.style.backgroundColor = "#6B1414";
+    researchFilter.style.color = "white";
+    for(let i=1; i<=6; i++){
+        document.getElementById("sportNews" + String(i)).style.display = "none";
+        document.getElementById("innovationNews" + String(i)).style.display = "block";
+        document.getElementById("academicNews" + String(i)).style.display = "none";
+        document.getElementById("technologyNews" + String(i)).style.display = "none";
+    }
+
 });
