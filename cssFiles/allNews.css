@@ -54,7 +54,7 @@ body{
 }
 #MLogoText{
     margin: 0;
-    color:#F5D97A;
+    color:#6B1414;
     letter-spacing: -2.6px;
     text-align: center;
     font-size: 50px;
@@ -129,7 +129,7 @@ body{
 #bodyContent{
     display: flex;
     flex-direction: column;
-    padding:36px 80px 64px 6.5%;
+    padding:10px 20% 10px 20%;
 }
 #BTitle{
     display: flex;
@@ -142,7 +142,7 @@ body{
 }
 #text2{
     font-size: 11px;
-    color:#6B1414;
+    color:#8B1A1A;
     font-weight: bold;
     letter-spacing: 1.5px;
 }
@@ -151,10 +151,12 @@ body{
     font-size: 48px;
     line-height: 100%;
     letter-spacing: -1.4px;
-    color:#657079;
+    margin-top: 0px;
+    color:#6B1414;
 }
 #text4{
     font-size: 16px;
+    margin-top: 0px;    
     color:#657079;
 }
 #newsSearchArea{
@@ -215,7 +217,7 @@ body{
 #topicFilters{
     display: flex;
     flex-direction: row;
-    gap: 1px;
+    gap: 5px;
     font-family: Inter,Arial, Helvetica, sans-serif;
     font-size: clamp(8px, 1vw, 26px);
 }
@@ -244,17 +246,26 @@ body{
 }
 
 .storyRow{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 6vw, 40px);
     margin-top: 20px;
-    justify-content: space-between;
+    height:auto;
+    border: 0.5px solid #160707;
 }
 .news{
     display: flex;
     flex-direction: column;
-    width: clamp(200px, 30vw, 500px);
-
+    border: 0.5px solid #dcdcdc;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.news:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
 }
 .news h4,#exploreAreaTxt h4{
     font-family: Inter,Arial, Helvetica, sans-serif;
@@ -265,24 +276,24 @@ body{
 }
 .news h3,#exploreAreaTxt h3{
     font-family: Libre Baskerville,Arial, Helvetica, sans-serif;
-    font-size: clamp(10px, 2vw, 26px);
+    font-size: clamp(10px, 2vw, 16px);
     color:#3D1010;
     margin-bottom: 0px;
 }
 .news h5{
     font-family: Inter,Arial, Helvetica, sans-serif;
-    font-size: clamp(3px, 0.7vw, 11px);
+    font-size: clamp(3px, 0.7vw, 7px);
     color:#657079;
 }
 .news p{
     font-family: Inter,Arial, Helvetica, sans-serif;
-    font-size: clamp(10px, 1vw, 14px);
+    font-size: clamp(10px, 1vw, 12px);
     color:#657079;
 }
 
 .newsImage{
-    width: 100%;
-    height: auto;
+    width: clamp(150px, 30vw, 260px);
+    height: clamp(120px, 16vw, 220px);
     object-fit: cover;
 }
 #sampleBtns{
@@ -292,10 +303,16 @@ body{
 .sampleBtns{
     padding: 5px 15px;
 }
+#btnNext{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
 #btnNext img{
     margin-top: auto;
-    margin-bottom: 0;
-    margin-left: 5%;
+    margin-bottom: auto;
     width: 30%;
     height: 60%;
 }
@@ -330,9 +347,15 @@ body{
     margin-top: auto;
     margin-bottom: auto;
     color: white;
+    cursor: pointer;
+}
+#exploreBtn:hover{
+    background-color: #8B1A1A;
+    transition: background-color 0.3s;
 }
 #exploreBtn p{
-    margin-top: clamp(30px, 1vh, 40px);
+    margin-top: auto;
+    margin-bottom: auto;
     text-align: center;
     margin-left: auto;
 }
@@ -399,4 +422,236 @@ body{
     font-size: 11px;
     color:#E8DCD2;
     padding: 10px 0;
+}
+
+@media (max-width: 1024px){
+    #HribbonMiddle{
+        padding: 0 5%;
+        gap: 20px;
+    }
+
+    #MLogoText{
+        font-size: clamp(32px, 5vw, 42px);
+        line-height: 1;
+    }
+
+    #MLogoText span{
+        font-size: clamp(8px, 1.2vw, 10px);
+        letter-spacing: 1px;
+    }
+
+    #searchBox{
+        width: clamp(160px, 22vw, 220px);
+    }
+
+    #bodyContent{
+        padding: 32px 5% 48px;
+    }
+
+    #searchBars{
+        flex-wrap: wrap;
+    }
+
+    #search1,
+    #search2{
+        flex: 1 1 220px;
+    }
+
+    .searchBar{
+        width: 100%;
+    }
+
+    #searchButton{
+        flex: 1 1 160px;
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .storyRow{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .news{
+        width: 100%;
+    }
+
+    #exploreArea{
+        padding: 32px 5% 48px;
+    }
+
+    #footer{
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width: 600px){
+    #HribbonTop{
+        height: auto;
+        padding: 8px 16px;
+    }
+
+    #Hlogo{
+        margin: 0;
+    }
+
+    #logo{
+        margin: 0 8px 0 0;
+    }
+
+    #logoText{
+        margin: auto 0;
+    }
+
+    #HribbonMiddle{
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    #date{
+        order: 2;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    #MRibbonLogo{
+        order: 1;
+    }
+
+    #Mlogo{
+        width: 70px;
+        margin: 0;
+    }
+
+    #MLogoText{
+        font-size: clamp(28px, 9vw, 38px);
+    }
+
+    #MLogoText span{
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    #searchBox{
+        order: 3;
+        width: 100%;
+    }
+
+    #menuItems{
+        gap: 16px;
+        margin-left: 0;
+        padding: 0 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #menuItems div{
+        flex: 0 0 auto;
+    }
+
+    #bodyContent{
+        padding: 24px 16px 40px;
+    }
+
+    #text3{
+        font-size: clamp(34px, 11vw, 48px);
+    }
+
+    #text4{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #newsSearchArea{
+        padding: 16px;
+    }
+
+    #searchBars{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #search1,
+    #search2,
+    #searchButton{
+        width: 100%;
+        flex: none;
+    }
+
+    #searchButton{
+        height: 42px;
+    }
+
+    #topicFilters{
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+    }
+
+    #topicFilters div{
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    #archiveSummary{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .storyRow{
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .news{
+        width: 100%;
+    }
+
+    .newsImage{
+        height: 180px;
+    }
+
+    #archive > div{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #sampleBtns{
+        flex-wrap: wrap;
+    }
+
+    #exploreArea{
+        flex-direction: column;
+        gap: 20px;
+        padding: 28px 16px 40px;
+    }
+
+    #exploreBtn{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #footer{
+        padding: 24px 16px;
+    }
+
+    #FooterUORLogo{
+        align-items: flex-start;
+    }
+
+    #footerLogo{
+        width: 70px;
+    }
+
+    #footerLogoText{
+        font-size: 18px;
+    }
+
+    #copyRight{
+        font-size: 10px;
+    }
 }
