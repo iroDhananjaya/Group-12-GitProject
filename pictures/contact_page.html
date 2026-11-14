@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_page.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Contact Us</h1>
+
+        <div class="columns">
+            <div class="details">
+                <h2>Address</h2>
+                <p>
+                    University of Ruhuna,<br>
+                    Wellamadama complex,<br>
+                    Matara, Sri Lanka.
+                </p>
+                
+                <div class="map">
+                    <img src="map.png" alt="Location map">
+                </div>
+
+                <div class="contact-links">
+                    <div>
+                        <h3>Telephone</h3>
+                        <p>+94 412222681</p>
+                    </div>
+                    <div>
+                        <h3>Mail</h3>
+                        <p>office@sci.ruh.ac.lk</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-area">
+                <h2>Send Messages</h2>
+              
+
+                <form action="contact_massege_page.html" method="GET">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your Email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Enter subject" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                    <div class="actions">
+                        <button type="submit" class="btn-dark">Submit</button>
+                        <div class="social-links">
+                            <a href="#">WhatsApp</a>
+                            <a href="#">GitHub</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Facebook</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html
