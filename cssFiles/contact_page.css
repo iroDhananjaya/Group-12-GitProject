@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Libre Baskerville';
-    src: url('/Group-12-GitProject/fonts/LibreBaskerville-Bold.ttf') format('truetype');
+    src: url('../fonts/LibreBaskerville-Bold.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;

@@ -102,6 +102,9 @@ body{
     height: clamp(40px, 4vh, 60px);
     padding: 2px 0px 0px;
 }
+#home{
+    border-bottom: 4px solid #6B1414;
+}
 #menuItems{
     display: flex;
     flex-direction: row;
@@ -122,6 +125,7 @@ body{
     box-sizing: border-box;
     border-bottom: 4px solid transparent;
 }
+
 #menuItems div:hover{
     cursor: pointer;
     border-bottom: 4px solid #6B1414;
