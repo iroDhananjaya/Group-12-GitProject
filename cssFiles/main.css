@@ -98,7 +98,7 @@ ul{
 #mainContent{
     position: relative;
     height: 60vh;
-    background-image: url('/Group-12-GitProject/pictures/ruhuna12pc.jpg');
+    background-image: url('../pictures/ruhuna12pc.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

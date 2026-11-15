@@ -37,23 +37,23 @@ const innovationNews2 = document.getElementById("innovationNews2");
 // navigation buttons event listeners
 
 home.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/index.html";
+    window.location.href = "../index.html";
 });
 
 allNews.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/htmlFiles/allNews.html";
+    window.location.href = "../htmlFiles/allNews.html";
 });
 
 about.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/htmlFiles/about.html";
+    window.location.href = "../htmlFiles/about.html";
 });
 
 events.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/htmlFiles/events.html";
+    window.location.href = "../htmlFiles/events.html";
 });
 
 contact.addEventListener("click", () => {
-    window.location.href = "/Group-12-GitProject/htmlFiles/Contact_page.html";
+    window.location.href = "../htmlFiles/Contact_page.html";
 });
 function resetFilterButtons(filterButton) {
     filterButton.style.backgroundColor = "#F5F5F5";
