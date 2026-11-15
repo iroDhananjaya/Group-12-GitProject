@@ -59,7 +59,7 @@ function resetFilterButtons(filterButton) {
     filterButton.style.backgroundColor = "#F5F5F5";
     filterButton.style.color = "black";
 }
-// filter buttons event listeners
+
 sportNews1.style.display = "block";
 innovationNews1.style.display = "block";
 academicNews1.style.display = "block";
@@ -67,6 +67,10 @@ technologyNews1.style.display = "block";
 academicNews2.style.display = "block";
 technologyNews2.style.display = "block";
 
+allNewsFilter.style.backgroundColor = "#6B1414";
+allNewsFilter.style.color = "white";
+
+// filter buttons event listeners
 allNewsFilter.addEventListener("click", () => {
     resetFilterButtons(academicFilter);
     resetFilterButtons(sportFilter);
