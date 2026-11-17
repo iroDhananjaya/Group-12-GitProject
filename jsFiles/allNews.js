@@ -1,6 +1,7 @@
 // import navigation buttons
 const home = document.getElementById("home");
 const allNews = document.getElementById("allNews");
+const artsCulture = document.getElementById("artsCulture");
 const about = document.getElementById("about");
 const events = document.getElementById("events");
 const contact = document.getElementById("contact");
@@ -44,12 +45,16 @@ allNews.addEventListener("click", () => {
     window.location.href = "../htmlFiles/allNews.html";
 });
 
+artsCulture.addEventListener("click", () => {
+    window.location.href = "../htmlFiles/arts.html";
+});
+
 about.addEventListener("click", () => {
     window.location.href = "../htmlFiles/about.html";
 });
 
 events.addEventListener("click", () => {
-    window.location.href = "../htmlFiles/events.html";
+    window.location.href = "../htmlFiles/ruhuna-record-events.html";
 });
 
 contact.addEventListener("click", () => {

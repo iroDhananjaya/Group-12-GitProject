@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../cssFiles/allNews.css">
 <style>
   :root {
     --maroon: #6b1414;
@@ -159,7 +160,7 @@
 <body>
 
 <!-- Top bar -->
-<div class="topbar">
+<!--<div class="topbar">
   <div class="wrap">
     <a class="brand" href="#"><img class="logo logo-top" src="https://www.ruh.ac.lk/images/2021/01/06/ruhuna.gif" alt="University of Ruhuna crest">University of Ruhuna</a>
     <div class="toplinks">
@@ -168,9 +169,10 @@
       <a href="#">Give to Ruhuna</a>
     </div>
   </div>
-</div>
+</div>-->
 
 <!-- Masthead -->
+ <!--
 <header class="masthead">
   <div class="wrap">
     <div class="dateline">
@@ -190,8 +192,42 @@
     </form>
   </div>
 </header>
+-->
+<div id="headRibbon">
+            <div id="HribbonTop">
+                <div id="Hlogo">
+                    <img src="../pictures/logo.webp" id="logo" alt="logo.webp">
+                    <div id="logoText">University of Ruhuna</div>
+                </div>
+            </div>
+            <div id="HribbonMiddle">
+                <div id="date">
+                    <p>MONDAY, OCTOBER 19, 2026<br/><span>Ideas. People. Possibility.</span></p>
+                </div>
+                <div id="MRibbonLogo">
+                    <img src="../pictures/logo.webp" id="Mlogo" alt="logo.webp">
+                    <p id="MLogoText">The Ruhuna Record<br/><span>NEWS & IDEAS FROM UNIVERSITY OF RUHUNA</span></p>
+                </div>
+                <div id="searchBox">
+                    <img src="../pictures/search.png" alt="" id="searchIcon">
+                    <input type="text" id="searchBar" placeholder="Search...">
+                </div>
+            </div>
+            <div id="HribbonMenu">
+                <div id="menuItems">
+                    <div id="home">Home</div>
+                    <div id="allNews">All news</div>
+                    <div id="artsCulture">Arts & Culture</div>
+                    <div id="about">About</div>
+                    <div id="events">Events</div>
+                    <div id="contact">Contact</div>
+                    
+                </div>
+            </div>
+      </div>
 
 <!-- Nav -->
+ <!--
 <nav class="nav" id="mainnav">
   <div class="wrap">
     <a class="nav-brand" href="#"><img src="https://www.ruh.ac.lk/images/2021/01/06/ruhuna.gif" alt="">The Ruhuna Record</a>
@@ -203,6 +239,7 @@
     <a href="#" class="active">Events</a>
   </div>
 </nav>
+-->
 
 <main class="wrap">
   <div class="crumbs">
@@ -425,5 +462,6 @@
   renderList();
   renderCalendar();
 </script>
+<script src="../jsFiles/allNews.js"></script>
 </body>
 </html>

@@ -75,6 +75,14 @@ body {
     font-weight: 400;
 }
 
+@media (max-width: 600px) {
+    #date {
+        order: 2;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
 #Mlogo {
     width: 15%;
     border-radius: 5px;
