@@ -24,11 +24,11 @@ body {
     margin: 0;
     background-color: rgb(255, 251, 245);
     font-family: 'Libre Baskerville';
+    overflow-x: hidden;
 }
 
-
 #headRibbon {
-    width: 100vw;
+    width: 100%;
 }
 
 #HribbonTop {
@@ -434,6 +434,19 @@ button,
 }
 
 @media (max-width: 768px) {
+    #headRibbon,
+    #footer,
+    #footerContent,
+    #content,
+    .f_body,
+    .columns,
+    .details,
+    .form-area {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
     #HribbonMiddle {
         flex-direction: column;
         gap: 16px;
@@ -467,6 +480,21 @@ button,
         align-items: stretch;
     }
 
+    .columns {
+        gap: 32px;
+    }
+
+    .details,
+    .form-area {
+        width: 100%;
+    }
+
+    .map {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
     #footer {
         padding: 24px 20px;
     }
@@ -481,5 +509,176 @@ button,
 
     #copyRight {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #HribbonTop {
+        height: auto;
+        min-height: 36px;
+        padding: 8px 16px;
+    }
+
+    #Hlogo {
+        margin: 0;
+        align-items: center;
+    }
+
+    #logo {
+        width: 20px;
+        height: auto;
+        margin: 0 8px 0 0;
+    }
+
+    #logoText {
+        margin: 0;
+        font-size: 11px;
+    }
+
+    #HribbonMiddle {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    #MRibbonLogo {
+        order: 1;
+        width: 100%;
+    }
+
+    #Mlogo {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 6px;
+    }
+
+    #MLogoText {
+        font-size: clamp(27px, 8.5vw, 36px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    #MLogoText span {
+        display: block;
+        margin-top: 6px;
+        letter-spacing: 1px;
+    }
+
+    #date {
+        order: 2;
+        width: 100%;
+    }
+
+    #searchBox {
+        order: 3;
+    }
+
+    #HribbonMenu {
+        height: 44px;
+    }
+
+    #menuItems {
+        height: 42px;
+        margin: 0;
+        padding: 0 16px;
+        gap: 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #menuItems div {
+        flex: 0 0 auto;
+        font-size: 11px;
+    }
+
+    .f_body {
+        padding: 32px 16px !important;
+    }
+
+    h1 {
+        font-size: clamp(32px, 10vw, 42px);
+        line-height: 1.15;
+        margin-bottom: 24px;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        line-height: 1.25;
+    }
+
+    .contact-links {
+        gap: 16px;
+    }
+
+    .details p,
+    .contact-links p {
+        overflow-wrap: anywhere;
+    }
+
+    input,
+    textarea {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .btns,
+    .btn_group {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn_dark,
+    .btn_light,
+    .btn_group > * {
+        width: 100%;
+    }
+
+    .social {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .social a,
+    .social img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social img {
+        object-fit: contain;
+    }
+
+    #footer {
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    #FooterUORLogo {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    #footerLogo {
+        width: 70px;
+        max-width: 70px;
+    }
+
+    #footerLogoText,
+    #content p,
+    #copyRight,
+    #copyRight p {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    #copyRight {
+        justify-content: center;
+        line-height: 1.5;
     }
 }
